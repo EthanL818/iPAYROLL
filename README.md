@@ -12,7 +12,7 @@ iPAYROLL is a desktop application built with JavaFX for efficient payroll manage
 
 ## Installation
 
-1. Clone the repository: git clone [https://github.com/your-username/iPAYROLL.git](https://github.com/EthanL818/iPAYROLL.git)
+1. Clone the repository: `git clone https://github.com/your-username/iPAYROLL.git](https://github.com/EthanL818/iPAYROLL.git`
 
 2. Open the project in your favorite IDE (Integrated Development Environment).
 
