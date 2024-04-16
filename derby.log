@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Apr 08 17:39:43 UTC 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-018e-becb-5d57-000007689ae0 
+on database directory C:\Users\ethan\OneDrive\Documents\School\Year 2\Sem 2\SE 2203\Assignment4\iPAYROLL\iPAYROLL\iPAYROLLDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406 
+Loaded from file:/C:/Users/ethan/AppData/Roaming/JetBrains/IntelliJIdea2022.2/jdbc-drivers/Apache%20Derby/10.16.1.1/org/apache/derby/derby/10.16.1.1/derby-10.16.1.1.jar
+java.vendor=JetBrains s.r.o.
+java.runtime.version=17.0.4+7-b469.53
+user.dir=C:\Users\ethan\OneDrive\Documents\School\Year 2\Sem 2\SE 2203\Assignment4\iPAYROLL\iPAYROLL
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

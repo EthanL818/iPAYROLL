@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se2203b.ipayroll.AddNewEmployeeProfileController">
+   <children>
+      <Label layoutX="61.0" layoutY="108.0" text="Employee ID" textAlignment="RIGHT" />
+      <TextField fx:id="id" layoutX="140.0" layoutY="104.0" prefHeight="26.0" prefWidth="118.0" />
+      <Label layoutX="368.0" layoutY="108.0" text="Employee Name" />
+      <TextField fx:id="fullName" layoutX="467.0" layoutY="104.0" prefHeight="26.0" prefWidth="253.0" />
+      <TabPane fx:id="tb" layoutY="140.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="313.0" prefWidth="760.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <tabs>
+          <Tab fx:id="personalDataTab" style="-fx-background-color: #ececec;" text="Personal Information">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="412.0" prefWidth="462.0" style="-fx-background-color: #dbdbdb;">
+                <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="70.0" layoutY="38.0" minWidth="80.0" text="Province" />
+                        <TextField fx:id="province" layoutX="160.0" layoutY="34.0" minHeight="10.0" minWidth="150.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="70.0" layoutY="74.0" minWidth="80.0" text="City" />
+                        <TextField fx:id="city" layoutX="160.0" layoutY="70.0" minHeight="10.0" minWidth="150.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="70.0" layoutY="111.0" minWidth="80.0" text="Phone" />
+                        <TextField fx:id="phone" layoutX="160.0" layoutY="107.0" minHeight="10.0" minWidth="150.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="70.0" layoutY="146.0" minWidth="80.0" text="PostalCode" />
+                        <TextField fx:id="postalCode" layoutX="160.0" layoutY="144.0" minHeight="10.0" minWidth="150.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="70.0" layoutY="189.0" minWidth="80.0" text="Martial Status" />
+                        <TextField fx:id="martialStatus" layoutX="160.0" layoutY="185.0" minHeight="10.0" minWidth="150.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="70.0" layoutY="227.0" minWidth="80.0" text="Skill Code" />
+                        <TextField fx:id="skillCode" layoutX="160.0" layoutY="223.0" minHeight="10.0" minWidth="150.0" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="370.0" layoutY="38.0" minWidth="130.0" text="SIN" />
+                        <TextField fx:id="SIN" layoutX="510.0" layoutY="34.0" minHeight="10.0" minWidth="150.0" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="370.0" layoutY="74.0" minWidth="130.0" text="Job Name" />
+                        <TextField fx:id="jobName" layoutX="510.0" layoutY="70.0" minHeight="10.0" minWidth="150.0" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="370.0" layoutY="148.0" minWidth="130.0" text="Date of Birth" />
+                        <DatePicker fx:id="DOB" layoutX="510.0" layoutY="144.0" minHeight="10.0" minWidth="150.0" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="370.0" layoutY="189.0" minWidth="130.0" text="Date of Hire" />
+                        <DatePicker fx:id="DOH" layoutX="510.0" layoutY="185.0" minHeight="10.0" minWidth="150.0" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="370.0" layoutY="227.0" minWidth="130.0" text="Date of Last Promotion" />
+                        <DatePicker fx:id="DOLP" layoutX="510.0" layoutY="223.0" minHeight="10.0" minWidth="150.0" />
+
+                </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="earningsDataTab" text="Earnings Data">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="312.0" prefWidth="760.0" style="-fx-background-color: #dbdbdb;">
+                     <children>
+                        <ComboBox fx:id="payTypeComboBox" layoutX="74.0" layoutY="23.0" prefWidth="150.0" />
+                        <Label layoutX="14.0" layoutY="27.0" text="Pay Type:" />
+                        <Label layoutX="233.0" layoutY="27.0" text="Working Hours / Week:" />
+                        <Label layoutX="418.0" layoutY="27.0" text="Statement Type: " />
+                        <CheckBox fx:id="exemptCheckBox" layoutX="672.0" layoutY="27.0" mnemonicParsing="false" text="Exempt" />
+                        <ComboBox fx:id="statementTypeComboBox" layoutX="507.0" layoutY="23.0" prefWidth="150.0" />
+                        <TextField fx:id="hoursPerWeek" layoutX="365.0" layoutY="23.0" prefHeight="25.0" prefWidth="45.0" />
+                        <VBox layoutX="14.0" layoutY="64.0" prefHeight="181.0" prefWidth="722.0">
+                           <children>
+                              <TableView fx:id="earningsTable" prefHeight="200.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn fx:id="earningSourceColumn" prefWidth="144.0" text="Earning Source" />
+                                  <TableColumn fx:id="valueColumn" minWidth="8.0" prefWidth="144.0" text="Value" />
+                                    <TableColumn fx:id="ratePerHourColumn" minWidth="0.0" prefWidth="145.0" text="Rate Per Hour" />
+                                    <TableColumn fx:id="startDateColumn" minWidth="0.0" prefWidth="143.0" text="Start Date" />
+                                    <TableColumn fx:id="endDateColumn" minWidth="0.0" prefWidth="145.0" text="End Date" />
+                                </columns>
+                              </TableView>
+                              <HBox prefHeight="19.0" prefWidth="722.0">
+                                 <children>
+                                    <ComboBox fx:id="earningSourceComboBox" editable="true" onAction="#updateSources" prefHeight="25.0" prefWidth="152.0" />
+                                    <TextField fx:id="valueTextField" prefHeight="25.0" prefWidth="144.0" />
+                                    <TextField fx:id="ratePerHourTextField" prefHeight="25.0" prefWidth="148.0" />
+                                    <DatePicker fx:id="startDate" prefHeight="25.0" prefWidth="143.0" />
+                                    <DatePicker fx:id="endDate" prefHeight="25.0" prefWidth="149.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="addBtn" layoutX="683.0" layoutY="258.0" mnemonicParsing="false" onAction="#addEarning" prefHeight="25.0" prefWidth="53.0" text="Add" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="deductionsDataTab" text="Deductions Data">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #dbdbdb;">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="-5.0" prefHeight="286.0" prefWidth="772.0">
+                           <children>
+                              <TableView fx:id="deductionsTable" prefHeight="200.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn fx:id="deductionSourceColumn" prefWidth="137.0" text="Deduction Source" />
+                                  <TableColumn fx:id="deductionValueColumn" prefWidth="89.0" text="Value" />
+                                    <TableColumn fx:id="percentOfEarningColumn" prefWidth="116.0" text="\% Of Earning" />
+                                    <TableColumn fx:id="upperLimitColumn" prefWidth="143.0" text="Upper Limit" />
+                                    <TableColumn fx:id="deductionStartDateColumn" prefWidth="143.0" text="Start Date" />
+                                    <TableColumn fx:id="deductionEndDateColumn" prefWidth="143.0" text="End Date" />
+                                </columns>
+                              </TableView>
+                              <HBox prefHeight="25.0" prefWidth="681.0">
+                                 <children>
+                                    <ComboBox fx:id="deductionSourceComboBox" editable="true" onAction="#updateSources" prefHeight="25.0" prefWidth="153.0" />
+                                    <TextField fx:id="deductionValueField" prefHeight="25.0" prefWidth="99.0" />
+                                    <TextField fx:id="percentOfEarningField" prefHeight="25.0" prefWidth="122.0" />
+                                    <TextField fx:id="upperLimitField" prefHeight="25.0" prefWidth="151.0" />
+                                    <DatePicker fx:id="deductionStartDate" prefHeight="25.0" prefWidth="158.0" />
+                                    <DatePicker fx:id="deductionEndDate" prefHeight="25.0" prefWidth="151.0" />
+                                 </children>
+                              </HBox>
+                              <Button fx:id="addDeductionBtn" alignment="CENTER" mnemonicParsing="false" onAction="#addDeduction" text="Add Deduction">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="323.0" layoutY="33.0" text="Add New Employee Profile" textFill="#080000" AnchorPane.topAnchor="33.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelBtn" layoutX="594.0" layoutY="498.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" AnchorPane.bottomAnchor="26.4" AnchorPane.rightAnchor="154.8" />
+      <Button fx:id="saveBtn" layoutX="680.0" layoutY="498.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="53.0" text="Save" AnchorPane.bottomAnchor="26.4" AnchorPane.rightAnchor="60.0" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
