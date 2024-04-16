@@ -26,7 +26,9 @@ iPAYROLL is a desktop application built with JavaFX for efficient payroll manage
 
 1. Launch the application.
 
-2. Log in using your credentials.
+2. Log in using your credentials, default admin credentials are:
+   `username: admin`
+   `password: admin`
 
 3. Navigate through the interface to manage employee information.
 
@@ -36,4 +38,3 @@ iPAYROLL is a desktop application built with JavaFX for efficient payroll manage
 
 - JavaFX
 - SQL Derby
-- Java Encryption Libraries (for password protection)
